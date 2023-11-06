@@ -1,0 +1,411 @@
+
+footer{ margin-top: 60px; padding-top: 50px;}
+body {background-color: black}
+
+
+
+/* ---- ----- ----- HOME HBO ----- ----- ----- */
+
+.background-image {
+	background-blend-mode: darken; 
+	height: 550px;
+	background-image:  url(./Imagenes_HBO/tendencia-imagen.png); 
+	background-size:cover;  
+	background-repeat: no-repeat;
+}
+.titulo2 {font-size: 15px}
+.listageneros{width: 98%; 
+	display:flex;
+	flex-flow: wrap; 
+	display: flex; 
+	justify-content: center; 
+	}
+
+
+.columnas {
+	opacity: 1
+}
+
+.contenedor2 { 
+	width: 98%; 
+	display:flex;
+	flex-flow: wrap; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+
+.contenedor2 img {
+    opacity: 0.45
+}
+
+.contenedor2 div {
+	position: relative;
+}
+
+.contenedor2 div p {
+	position: absolute;
+	left:0; display: block; 
+	width: 100%; top: 50%; 
+	text-align: center; 
+	text-decoration: none;
+	font-size: 28px; color: white; 
+	font-weight: 600;
+	font-family: 'Loto', sans-serif;
+}
+
+.caja-titulo {
+	position: relative;
+}
+
+
+.tendencia1titulo h4{
+	margin-top: 20px;
+}
+
+h4 {
+	font-size: 27px;
+	font-family: 'Encode Sans Condensed', sans-serif; 
+	font-weight: 600;
+	color: white;
+}
+
+
+
+.playboton {
+	position: absolute;
+    background: none;	
+    line-height: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: white;
+	border: none;
+	margin-left: 50px;
+}
+
+.botonagregar{
+	position: absolute;
+    background: none;	
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: white;
+	border: none;
+	margin-left: 100px;
+}
+
+.botoninfo{
+	position: absolute;
+	z-index: sticky 1020; 
+	margin-top: 130px;	
+	margin-left: 160px; 
+	color: white;	
+	top: calc(50% - 25%); 
+	fill: none;
+	font-size: 18px;
+}
+
+.botonestendencia {
+	margin-top: 220px;
+}
+
+.titulo-tendencia{
+	position: absolute; 
+	margin-top:60px; 
+	margin-left: 110px;
+	align-items: left; 
+}
+
+.titulo-tendencia h3{ 
+	font-size: 55px;
+	font-family:'Loto', sans-serif;
+	color:white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.numeracion h1{
+    font-size: 135px;
+	color: white;
+}	
+
+.sinopsis{
+	position: absolute; 
+	margin-top:230px; 
+	margin-left: 110px;
+	align-items: left; 
+	font-size: 16px;
+	font-family:'Loto', sans-serif;
+	color: black;
+}
+/* ---- ----- ----- FIN HOME HBO ----- ----- ----- */
+
+/* ---- ----- ----- carusel contenedores----- ----- ----- */
+
+.contenedor {
+    width: 96%; 
+    margin: auto;
+}
+
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h4 {
+	color:white;
+	font-size: 22px;
+	
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: black;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: blueviolet;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 30px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 30px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- FIN Carousel ----- ----- ----- */
+
+
+
+
+/* ---- ----- ----- HBO SERIES Y PELICULAS ----- ----- ----- */
+
+.background-image2 {
+	background-blend-mode: darken; 
+	height: 550px;
+	background-image:  url(./Imagenes_HBO/SERIES/tendencia-imagen.jpg); 
+	background-size:cover;  
+	background-repeat: no-repeat;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 50px ;
+}
+
+.text {
+	flex: 1; 
+	padding: 0px;
+	color: white;
+	font-size: 35px;
+	margin-right: 20px;
+	font-family: 'Fira Sans', sans-serif;
+	text-align: center;
+}
+
+.text2 {
+	flex: 1; 
+	padding: 0px;
+	color: white;
+	font-size: 35px;
+	margin-left: 20px;
+	font-family: 'Fira Sans', sans-serif;
+	text-align: center;
+}
+
+.images {
+	display: flex; margin-bottom: 8px; margin-left: 50px;
+}
+
+.images img {
+	max-width: 200px; 
+	margin-right: 10px; 
+	margin-bottom: 15px;
+}
+
+
+
+/* ---- ----- ----- PRODUCTORAS ----- ----- ----- */
+
+.background-image3 {
+	background-blend-mode: darken; 
+	height: 550px;
+	background-image:  url(./Imagenes_HBO/MAX\ ORIGINAL\ 1.jpg); 
+	background-size:cover;  
+	background-repeat: no-repeat;
+}
+
+.background-image4 {
+	background-blend-mode: darken; 
+	height: 550px;
+	background-image:  url(./Imagenes_HBO/warner-100-aniversario.jpg); 
+	background-size:cover;  
+	background-repeat: no-repeat;
+}
+
+
+.container2 {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px ;
+	margin-top: 25px;
+}
+
+.text3 {
+	padding: 0px;
+	color: white;
+	font-size: 30px;
+	margin-left: 87px;
+	margin-right: 25px;
+	font-family: 'Fira Sans', sans-serif;
+	text-align: center;
+}
+
+.text4 {
+	padding: 0px;
+	color: white;
+	font-size: 30px;
+	margin-left: 87px;
+	margin-right: 25px;
+	font-family: 'Fira Sans', sans-serif;
+	text-align: center;
+}
+
+
+.images2 {
+	display: flex; flex-flow: wrap; margin-bottom: 20px; margin-left: 90px
+}
+.images2 img {
+	max-width: 200px; 
+	margin-right: 8px; 
+	margin-bottom: 15px;
+}
+
+
+.contenedor-titulo-controles h3 {
+	color:white;
+	font-size: 28px;
+	
+}
+
+.image-container-series{ 
+	margin-top: 25px;
+	display:inline-block;
+	text-align: center;
+	
+}
+
+.image-container-series img{ flex: 1; width: 220px; margin-left: 8px; margin-bottom: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+
+}
